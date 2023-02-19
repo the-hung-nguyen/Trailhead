@@ -152,38 +152,275 @@
   </lightning-tabset>
 
 
-    <lightning-accordion class="example-accordion"
-                         active-section-name="A">
-        <lightning-accordion-section name="A" label="Accordion Title A">
-            <lightning-button-menu slot="actions"
-                                  alternative-text="Show menu"
-                                  icon-size="x-small"
-                                  menu-alignment="right">
-                <lightning-menu-item value="New" label="Menu Item One"></lightning-menu-item>
-                <lightning-menu-item value="Edit" label="Menu Item Two"></lightning-menu-item>
-            </lightning-button-menu>
-            <p>This is the content area for section A.</p>
-            <p>.</p>
-            <p>.</p>
-            <p>.</p>
-            <p>The section height expands to fit your content.</p>
-        </lightning-accordion-section>
+  <lightning-accordion class="example-accordion"
+                        active-section-name="A">
+      <lightning-accordion-section name="A" label="Accordion Title A">
+          <lightning-button-menu slot="actions"
+                                alternative-text="Show menu"
+                                icon-size="x-small"
+                                menu-alignment="right">
+              <lightning-menu-item value="New" label="Menu Item One"></lightning-menu-item>
+              <lightning-menu-item value="Edit" label="Menu Item Two"></lightning-menu-item>
+          </lightning-button-menu>
+          <p>This is the content area for section A.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>The section height expands to fit your content.</p>
+      </lightning-accordion-section>
 
-        <lightning-accordion-section name="B" label="Accordion Title B">
-            <p>This is the content area for section B.</p>
-            <p>.</p>
-            <p>.</p>
-            <p>.</p>
-            <p>The section height expands to fit your content.</p>
-        </lightning-accordion-section>
+      <lightning-accordion-section name="B" label="Accordion Title B">
+        <div class="slds-form-element slds-form-element_compound">
 
-        <lightning-accordion-section name="C" label="Accordion Title C">
-            <p>This is the content area for section C.</p>
-            <p>.</p>
-            <p>.</p>
-            <p>.</p>
-            <p>The section height expands to fit your content.</p>
-        </lightning-accordion-section>
+          <div class="slds-form-element__control">
+            <div class="slds-form-element__row">
+              <div class="slds-size_1-of-3">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">KWH:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="2890.0534" format-style="decimal" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-3">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="3147.0534" format-style="decimal" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-3">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="125.0534" format-style="decimal" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <fieldset class="slds-form-element slds-form-element_compound">
+          <legend class="slds-form-element__legend slds-form-element__label">KW</legend>
+          <div class="slds-form-element__control">
+            <div class="slds-form-element__row">
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="0.0534" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min date/time:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="0.1234" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Max:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="0.7734" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-02">Max date/time:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="786.34" format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-02">F.P.%</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="123.34" format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="slds-form-element slds-form-element_compound">
+          <legend class="slds-form-element__legend slds-form-element__label">kVA</legend>
+          <div class="slds-form-element__control">
+            <div class="slds-form-element__row">
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="0.20234" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min date/time:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="0.003434" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Max:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="0.8934" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-5">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-02">Max date/time:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="1232.34" format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </lightning-accordion-section>
+
+      <lightning-accordion-section name="C" label="Accordion Title C">
+        <div class="slds-form-element slds-form-element_compound">
+          <div class="slds-form-element__control">
+            <div class="slds-form-element__row">
+              <div class="slds-size_1-of-3">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">KWH:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="2890.0534" format-style="decimal" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-3">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="3147.0534" format-style="decimal" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+              <div class="slds-size_1-of-3">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="input-01">Min:</label>
+                  <div class="slds-form-element__control">
+                    <lightning-formatted-number value="125.0534" format-style="decimal" maximum-fraction-digits="3"></lightning-formatted-number>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="slds-panel slds-size_full" aria-hidden="false">
+          <div class="slds-panel__header">
+            <h2 class="slds-panel__header-title slds-text-heading_small" title="Panel Header">KW</h2>
+          </div>
+          <div class="slds-panel__body">
+            <div class="slds-form-element slds-form-element_compound">
+              <div class="slds-form-element__control">
+                <div class="slds-form-element__row">
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-01">Min:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="0.0534" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-01">Min date/time:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="0.1234" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-01">Max:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="0.7734" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-02">Max date/time:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="786.34" format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-02">F.P.%</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="123.34" format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="slds-panel slds-size_full" aria-hidden="false">
+          <div class="slds-panel__header">
+            <h2 class="slds-panel__header-title slds-text-heading_small" title="Panel Header">kVA</h2>
+          </div>
+          <div class="slds-panel__body">
+            <div class="slds-form-element slds-form-element_compound">
+              <div class="slds-form-element__control">
+                <div class="slds-form-element__row">
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-01">Min:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="0.20234" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-01">Min date/time:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="0.003434" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-01">Max:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="0.8934" format-style="percent" maximum-fraction-digits="3"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slds-size_1-of-5">
+                    <div class="slds-form-element">
+                      <label class="slds-form-element__label" for="input-02">Max date/time:</label>
+                      <div class="slds-form-element__control">
+                        <lightning-formatted-number value="1232.34" format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </lightning-accordion-section>
     </lightning-accordion>
 
 
