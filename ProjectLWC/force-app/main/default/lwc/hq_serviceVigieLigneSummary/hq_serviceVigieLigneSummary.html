@@ -1,0 +1,136 @@
+<template>
+  <div class="container slds-size_2-of-3" >
+      <lightning-accordion class="example-accordion" active-section-name={activeContributeur}>
+          <template for:each={listSummaryData} for:item="summaryData">
+              <lightning-accordion-section key={summaryData.hq_Contributeur__c} name={summaryData.hq_Contributeur__c} label={summaryData.hq_Contributeur__c}>
+                  <div class="slds-form-element slds-form-element_compound">
+                      <div class="slds-form-element__control">
+                          <div class="slds-form-element__row">
+                              <div class="slds-size_1-of-4">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">kWh:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.kWh} format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-4">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Facteur d'utilisation (%):</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.usageFactor} format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-4">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Nombre d'intervalles:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.numberIntervals}></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-4">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Nombre d'intervalles à zéro:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.numberIntervalsZero}></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br/>
+                  <div class="slds-form-element slds-form-element_compound slds-box slds-box_x-small">
+                      <legend class="slds-form-element__legend slds-form-element__label">Sommaire kW</legend>
+                      <div class="slds-form-element__control">
+                          <div class="slds-form-element__row">
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Min:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.kWMin} format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Date/heure min:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-date-time value={summaryData.kWMinDate}></lightning-formatted-date-time>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Max:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.kWMax} format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Date/heure max:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-date-time value={summaryData.kWMaxDate}></lightning-formatted-date-time>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">F.P. max (%):</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.maxPowerFactor} format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br/>
+                  <div class="slds-form-element slds-form-element_compound slds-box slds-box_x-small">
+                      <legend class="slds-form-element__legend slds-form-element__label">Sommaire kVA</legend>
+                      <div class="slds-form-element__control">
+                          <div class="slds-form-element__row">
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Min:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.kVAMin} format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Date/heure min:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-date-time value={summaryData.kVAMinDate}></lightning-formatted-date-time>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Max:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-number value={summaryData.kVAMax} format-style="decimal" maximum-fraction-digits="1"></lightning-formatted-number>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="slds-size_1-of-5">
+                                  <div class="slds-form-element">
+                                      <label class="slds-form-element__label">Date/heure max:</label>
+                                      <div class="slds-form-element__control">
+                                          <lightning-formatted-date-time value={summaryData.kVAMaxDate}></lightning-formatted-date-time>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </lightning-accordion-section>
+          </template>
+      </lightning-accordion>
+  </div>
+</template>
